@@ -1,73 +1,47 @@
 <view class="container">
-  <scroll-view class="box_hd_tab" scroll-x="true">
+  <scroll-view class="cnt_hd_tab" scroll-x="true">
     <view wx:for="{{tabblock}}" class="tabBlock"  
     bindtap="tabClick">{{item.name}}</view>
   </scroll-view>
-  <view class="box">
-    <navigator class="box_header">
+
+  <view class="block">
+    <navigator class="block_hd">
       <swiper class="swiper" indicator-dots="true" autoplay="true" interval="5000" duration="1000">    
         <block wx:for="{{headerpic}}">    
           <swiper-item>
-            <image src="{{item.src}}" class="headerImage" mode="widthFix"/> 
+            <image src="{{item.src}}" class="hdImage" /> 
           </swiper-item>
         </block>    
       </swiper>  
     </navigator>
-    <view class="box_body"></view>
-    <view class="box_footer"></view>
-  </view>
-  <view class="block_bd">
-    <view class="online">
-      <navigator class="goods">
-        <view class="block__hd">
-          <image class="blockpic" src="../../images/one.png"></image>
-        </view>
-        <view class="block__ft">
-          <text class="content">睡衣女夏短袖丝绸性感夏天女人薄款大码家居服两件套冰丝短</text>
-          <view class="target">
-            <text class="price">￥21.8</text>
-            <text class="pingtuan">已团3万件</text>
+    <view class="block_bd"></view>
+    <view class="block_ft">
+      <view class="blk_online">
+        <navigator class="blk_onl_goods">
+          <view class="blk_gd_hd">
+            <image class="blockpic" src="../../images/one.png"></image>
           </view>
-        </view>
-      </navigator>
-      <navigator class="goods">
-        <view class="block__hd">
-          <image class="blockpic" src="../../images/one.png"></image>
-        </view>
-        <view class="block__ft">
-          <text class="content">睡衣女夏短袖丝绸性感夏天女人薄款大码家居服两件套冰丝短</text>
-          <view class="target">
-            <text class="price">￥21.8</text>
-            <text class="pingtuan">已团3万件</text>
+          <view class="blk_gd_ft">
+            <text class="blk_gd_ctn">睡衣女夏短袖丝绸性感夏天女人薄款大码家居服两件套冰丝短</text>
+            <view class="blk_gd_target">
+              <text class="blk_gd_price">￥21.8</text>
+              <text class="blk_gd_tuan">已团3万件</text>
+            </view>
           </view>
-        </view>
-      </navigator>
-    </view>
-    <view class="online">
-      <navigator class="goods">
-        <view class="block__hd">
-          <image class="blockpic" src="../../images/one.png"></image>
-        </view>
-        <view class="block__ft">
-          <text class="content">睡衣女夏短袖丝绸性感夏天女人薄款大码家居服两件套冰丝短</text>
-          <view class="target">
-            <text class="price">￥21.8</text>
-            <text class="pingtuan">已团3万件</text>
-          </view>
-        </view>
-      </navigator>
-      <navigator class="goods">
-        <view class="block__hd">
-          <image class="blockpic" src="../../images/one.png"></image>
-        </view>
-        <view class="block__ft">
-          <text class="content">睡衣女夏短袖丝绸性感夏天女人薄款大码家居服两件套冰丝短</text>
-          <view class="target">
-            <text class="price">￥21.8</text>
-            <text class="pingtuan">已团3万件</text>
-          </view>
-        </view>
-      </navigator>
+        </navigator>
+        <navigator class="blk_onl_goods">
+            <view class="blk_gd_hd">
+              <image class="blockpic" src="../../images/one.png"></image>
+            </view>
+            <view class="blk_gd_ft">
+              <text class="blk_gd_ctn">睡衣女夏短袖丝绸性感夏天女人薄款大码家居服两件套冰丝短</text>
+              <view class="blk_gd_target">
+                <text class="blk_gd_price">￥21.8</text>
+                <text class="blk_gd_tuan">已团3万件</text>
+              </view>
+            </view>
+          </navigator>
+      </view>
     </view>
   </view>
  
