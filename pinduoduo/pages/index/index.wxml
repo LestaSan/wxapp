@@ -5,16 +5,39 @@
   </scroll-view>
 
   <view class="block">
-    <navigator class="block_hd">
-      <swiper class="swiper" indicator-dots="true" autoplay="true" interval="5000" duration="1000">    
-        <block wx:for="{{headerpic}}">    
+
+    <swiper class="swiper" indicator-dots="true" indicator-color="#ffffff" autoplay="true" interval="5000" duration="1000">
+      <navigator class="block_hd" >
+        <view wx:for="{{headerpic}}"> 
           <swiper-item>
-            <image src="{{item.src}}" class="hdImage" /> 
+            <image src="{{item.src}}" class="hdImage" />
           </swiper-item>
-        </block>    
-      </swiper>  
-    </navigator>
-    <view class="block_bd"></view>
+        </view>
+      </navigator>
+    </swiper>
+  
+    <view class="block_bd">
+      <scroll-view class="scroll-view" scroll-x="true">
+        <view class="blkpic">
+          <block wx:for="{{blkpic1}}">
+            <navigator class="blk__bd">
+              <image src="{{item.src}}" class="blkImage" />
+              <text class="blk_title">{{item.title}}</text>
+            </navigator>
+          </block>
+        </view>
+        <view class="blkpic">
+          <block wx:for="{{blkpic2}}">
+            <view class="blk__bd">
+              <navigator>
+                <image src="{{item.src}}" class="blkImage" />
+              </navigator>
+            </view>
+          </block>
+        </view>
+      </scroll-view>
+    </view>
+
     <view class="block_ft">
       <view class="blk_online">
         <navigator class="blk_onl_goods">
@@ -31,7 +54,7 @@
         </navigator>
         <navigator class="blk_onl_goods">
             <view class="blk_gd_hd">
-              <image class="blockpic" src="../../images/one.png"></image>
+              <image class="blockpic" src="../../images/two.png"></image>
             </view>
             <view class="blk_gd_ft">
               <text class="blk_gd_ctn">睡衣女夏短袖丝绸性感夏天女人薄款大码家居服两件套冰丝短</text>
@@ -41,6 +64,60 @@
               </view>
             </view>
           </navigator>
+      </view>
+
+      <view class="blk_online">
+        <navigator class="blk_onl_goods">
+          <view class="blk_gd_hd">
+            <image class="blockpic" src="../../images/three.png"></image>
+          </view>
+          <view class="blk_gd_ft">
+            <text class="blk_gd_ctn">睡衣女夏短袖丝绸性感夏天女人薄款大码家居服两件套冰丝短</text>
+            <view class="blk_gd_target">
+              <text class="blk_gd_price">￥21.8</text>
+              <text class="blk_gd_tuan">已团3万件</text>
+            </view>
+          </view>
+        </navigator>
+        <navigator class="blk_onl_goods">
+          <view class="blk_gd_hd">
+            <image class="blockpic" src="../../images/four.png"></image>
+          </view>
+          <view class="blk_gd_ft">
+            <text class="blk_gd_ctn">睡衣女夏短袖丝绸性感夏天女人薄款大码家居服两件套冰丝短</text>
+            <view class="blk_gd_target">
+              <text class="blk_gd_price">￥21.8</text>
+              <text class="blk_gd_tuan">已团3万件</text>
+            </view>
+          </view>
+        </navigator>
+      </view>
+
+      <view class="blk_online">
+        <navigator class="blk_onl_goods">
+          <view class="blk_gd_hd">
+            <image class="blockpic" src="../../images/five.png"></image>
+          </view>
+          <view class="blk_gd_ft">
+            <text class="blk_gd_ctn">睡衣女夏短袖丝绸性感夏天女人薄款大码家居服两件套冰丝短</text>
+            <view class="blk_gd_target">
+              <text class="blk_gd_price">￥21.8</text>
+              <text class="blk_gd_tuan">已团3万件</text>
+            </view>
+          </view>
+        </navigator>
+        <navigator class="blk_onl_goods">
+          <view class="blk_gd_hd">
+            <image class="blockpic" src="../../images/six.png"></image>
+          </view>
+          <view class="blk_gd_ft">
+            <text class="blk_gd_ctn">睡衣女夏短袖丝绸性感夏天女人薄款大码家居服两件套冰丝短</text>
+            <view class="blk_gd_target">
+              <text class="blk_gd_price">￥21.8</text>
+              <text class="blk_gd_tuan">已团3万件</text>
+            </view>
+          </view>
+        </navigator>
       </view>
     </view>
   </view>
