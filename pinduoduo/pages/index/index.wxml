@@ -21,8 +21,8 @@
         <view class="blkpic">
           <block wx:for="{{blkpic1}}">
             <navigator class="blk__bd">
-              <image src="{{item.src}}" class="blkImage" />
-              <text class="blk_title">{{item.title}}</text>
+              <image src="{{item.src}}" class="blkImage"/>
+              <view class="blk_title">{{item.title}}</view>
             </navigator>
           </block>
         </view>
@@ -30,12 +30,18 @@
           <block wx:for="{{blkpic2}}">
             <view class="blk__bd">
               <navigator>
-                <image src="{{item.src}}" class="blkImage" />
+                <image src="{{item.src}}" class="blkImage"/>
+                <view class="blk_title">{{item.title}}</view>
               </navigator>
             </view>
           </block>
         </view>
       </scroll-view>
+      <view class="iScrollHorizontalScrollbar iScrollLoneScrollbar">
+        <view class="iScrollIndicator" 
+        >
+        </view>
+      </view>
     </view>
 
     <view class="block_ft">

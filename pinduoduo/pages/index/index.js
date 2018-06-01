@@ -86,12 +86,30 @@ Page({
       },
     ],
     blkpic2: [
-      {src:'../../images/blkPic7.png'},
-      {src:'../../images/blkPic8.png'},
-      {src:'../../images/blkPic9.png'},
-      {src:'../../images/blkPic10.png'},
-      {src:'../../images/blkPic11.png'},
-      {src:'../../images/blkPic12.png'}
+      {
+        src:'../../images/blkPic7.png',
+        title:'砍价免费拿'
+      },
+      {
+        src:'../../images/blkPic8.png',
+        title:'名品折扣'
+      },
+      {
+        src:'../../images/blkPic9.png',
+        title:'海淘'
+      },
+      { 
+        src:'../../images/blkPic10.png',
+        title:'手机充值'
+      },
+      {
+        src:'../../images/blkPic11.png',
+        title:'天天领红包'
+      },
+      {
+        src:'../../images/blkPic12.png',
+        title:'时尚穿搭'
+      }
     ]
   },
 })
