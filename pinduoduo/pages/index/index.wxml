@@ -1,132 +1,64 @@
 <view class="container">
-  <scroll-view class="cnt_hd_tab" scroll-x="true">
-    <view wx:for="{{tabblock}}" class="tabBlock"  
-    bindtap="tabClick">{{item.name}}</view>
-  </scroll-view>
+  <view class="Block1">
+    <scroll-view class="block1" scroll-x="true">
+      <view wx:for="{{tabblock}}" data-id="{{index}}" 
+      class="blk1tab {{curNav == index? 'selected': ''}}" bindtap="tabClick">{{item.name}}</view>
+    </scroll-view>
+    <block wx:if="{{curTag == 1}}"><include src="../../test/one.wxml"/></block>
+    <block></block>
+    <block></block>
+  </view>
 
-  <view class="block">
-
-    <swiper class="swiper" indicator-dots="true" indicator-color="#ffffff" autoplay="true" interval="5000" duration="1000">
-      <navigator class="block_hd" >
-        <view wx:for="{{headerpic}}"> 
-          <swiper-item>
-            <image src="{{item.src}}" class="hdImage" />
-          </swiper-item>
-        </view>
-      </navigator>
-    </swiper>
+  <view class="Block2" hidden="{{tabClick()}}">
+    <view class="block2">
+      <swiper class="swiper" indicator-dots="true" indicator-color="#ffffff" autoplay="true" interval="5000" duration="1000">
+        <navigator class="blk2pic">
+          <view wx:for="{{headerpic}}">
+            <swiper-item>
+              <image src="{{item.src}}" class="blk2Image" />
+            </swiper-item>
+          </view>
+        </navigator>
+      </swiper>
+    </view>
   
-    <view class="block_bd">
+    <view class="block3">
       <scroll-view class="scroll-view" scroll-x="true">
-        <view class="blkpic">
+        <view class="block3_blk">
           <block wx:for="{{blkpic1}}">
-            <navigator class="blk__bd">
-              <image src="{{item.src}}" class="blkImage"/>
-              <view class="blk_title">{{item.title}}</view>
+            <navigator class="blk3pic">
+              <image src="{{item.src}}" class="blkImage" />
+              <view class="blk3title">{{item.title}}</view>
             </navigator>
           </block>
         </view>
-        <view class="blkpic">
+        <view class="block3_blk">
           <block wx:for="{{blkpic2}}">
-            <view class="blk__bd">
-              <navigator>
-                <image src="{{item.src}}" class="blkImage"/>
-                <view class="blk_title">{{item.title}}</view>
-              </navigator>
-            </view>
+            <navigator class="blk3pic">
+              <image src="{{item.src}}" class="blkImage" />
+              <view class="blk3title">{{item.title}}</view>
+            </navigator>
           </block>
         </view>
       </scroll-view>
-      <view class="iScrollHorizontalScrollbar iScrollLoneScrollbar">
-        <view class="iScrollIndicator" 
-        >
-        </view>
+      <view class="scroll-line">
+        <view class="scrollMove"></view>
       </view>
     </view>
-
-    <view class="block_ft">
-      <view class="blk_online">
-        <navigator class="blk_onl_goods">
-          <view class="blk_gd_hd">
-            <image class="blockpic" src="../../images/one.png"></image>
-          </view>
-          <view class="blk_gd_ft">
-            <text class="blk_gd_ctn">睡衣女夏短袖丝绸性感夏天女人薄款大码家居服两件套冰丝短</text>
-            <view class="blk_gd_target">
-              <text class="blk_gd_price">￥21.8</text>
-              <text class="blk_gd_tuan">已团3万件</text>
-            </view>
-          </view>
-        </navigator>
-        <navigator class="blk_onl_goods">
-            <view class="blk_gd_hd">
-              <image class="blockpic" src="../../images/two.png"></image>
-            </view>
-            <view class="blk_gd_ft">
-              <text class="blk_gd_ctn">睡衣女夏短袖丝绸性感夏天女人薄款大码家居服两件套冰丝短</text>
-              <view class="blk_gd_target">
-                <text class="blk_gd_price">￥21.8</text>
-                <text class="blk_gd_tuan">已团3万件</text>
-              </view>
-            </view>
-          </navigator>
-      </view>
-
-      <view class="blk_online">
-        <navigator class="blk_onl_goods">
-          <view class="blk_gd_hd">
-            <image class="blockpic" src="../../images/three.png"></image>
-          </view>
-          <view class="blk_gd_ft">
-            <text class="blk_gd_ctn">睡衣女夏短袖丝绸性感夏天女人薄款大码家居服两件套冰丝短</text>
-            <view class="blk_gd_target">
-              <text class="blk_gd_price">￥21.8</text>
-              <text class="blk_gd_tuan">已团3万件</text>
-            </view>
-          </view>
-        </navigator>
-        <navigator class="blk_onl_goods">
-          <view class="blk_gd_hd">
-            <image class="blockpic" src="../../images/four.png"></image>
-          </view>
-          <view class="blk_gd_ft">
-            <text class="blk_gd_ctn">睡衣女夏短袖丝绸性感夏天女人薄款大码家居服两件套冰丝短</text>
-            <view class="blk_gd_target">
-              <text class="blk_gd_price">￥21.8</text>
-              <text class="blk_gd_tuan">已团3万件</text>
-            </view>
-          </view>
-        </navigator>
-      </view>
-
-      <view class="blk_online">
-        <navigator class="blk_onl_goods">
-          <view class="blk_gd_hd">
-            <image class="blockpic" src="../../images/five.png"></image>
-          </view>
-          <view class="blk_gd_ft">
-            <text class="blk_gd_ctn">睡衣女夏短袖丝绸性感夏天女人薄款大码家居服两件套冰丝短</text>
-            <view class="blk_gd_target">
-              <text class="blk_gd_price">￥21.8</text>
-              <text class="blk_gd_tuan">已团3万件</text>
-            </view>
-          </view>
-        </navigator>
-        <navigator class="blk_onl_goods">
-          <view class="blk_gd_hd">
-            <image class="blockpic" src="../../images/six.png"></image>
-          </view>
-          <view class="blk_gd_ft">
-            <text class="blk_gd_ctn">睡衣女夏短袖丝绸性感夏天女人薄款大码家居服两件套冰丝短</text>
-            <view class="blk_gd_target">
-              <text class="blk_gd_price">￥21.8</text>
-              <text class="blk_gd_tuan">已团3万件</text>
-            </view>
-          </view>
-        </navigator>
-      </view>
+  
+  
+    <view class="block4">
+      <navigator class="blk4box" wx:for="{{block4Goods}}" url="{{item.url}}">
+        <image class="blk4pic" src="{{item.src}}"></image>
+        <view class="blk4_content">{{item.content}}</view>
+        <view class="blk4_price">
+          <text class="blk4__price">￥{{item.price}}</text>
+          <text class="blk4__tuan">{{item.tuan}}</text>
+        </view>
+      </navigator>
     </view>
   </view>
+  </view>
  
-</view>
+
     

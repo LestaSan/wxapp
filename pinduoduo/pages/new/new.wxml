@@ -1,0 +1,24 @@
+<view class="container" id="2">
+    <view class="block1">
+        <image class="block_box block1_pic" src="../../images/block1Pic.png"></image>
+        <text class="block_box block1_title">限时试新</text>
+    </view>
+    <scroll-view class="block2" scroll-x="true">
+        <navigator class="block2_box" wx:for="{{newScroll}}">
+            <image class="block2_pic" src="{{item.src}}"></image>
+            <view class="new_content">{{item.content}}</view>
+            <view class="new_price">￥0.01</view>
+        </navigator>
+    </scroll-view>
+    <view class="block3">
+        <image class="block_box block3_pic" src="../../images/block3Pic.png"></image>
+        <text class="block_box block3_title">精选新品</text>
+    </view>
+    <view class="block4">
+        <navigator class="block4_box" wx:for="{{newGoods}}" url="{{item.url}}">
+            <image class="block4_pic" src="{{item.src}}"></image>
+            <view class="block4_content">{{item.content}}</view>
+            <view class="block4_price">￥{{item.price}}</view>
+        </navigator>
+    </view>
+</view>
