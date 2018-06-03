@@ -1,13 +1,13 @@
 {
   "pages": [
-    "pages/one/one",
+    
     "pages/index/index",
     "pages/new/new",
     "pages/search/search",
     "pages/communicate/communicate",
     "pages/myself/myself",
-    "pages/logs/logs"
-    
+    "pages/logs/logs",
+    "pages/one/one"
     
   ],
   "window": {
