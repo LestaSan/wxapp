@@ -17,9 +17,9 @@
   font-size: 22rpx;
   text-align: center;
   color: #58595b;
-  margin: 0 18rpx;
-  padding: 14rpx 0;
-  border-bottom: 4rpx solid transparent;
+  margin: 10rpx 16rpx 0 14rpx;
+  padding: 12rpx 0 12rpx 0;
+  border-bottom: 2rpx solid transparent;
 }
 .block1 .selected {
   color: red;
