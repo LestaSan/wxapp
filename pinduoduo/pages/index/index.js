@@ -5,7 +5,7 @@ const app = getApp()
 Page({
   data: {
     curNav: 0,
-    curTag: null,
+    curTag: 0,
     tabblock: [
       {
         name: "热门",
@@ -225,13 +225,5 @@ Page({
       curNav: id,
       curTag: id
     });
-    return judge()
-  },
-  judge: function() {
-    if (cuTag == 0) {
-      return true
-    } else {
-      return false
-    }
   }
 })

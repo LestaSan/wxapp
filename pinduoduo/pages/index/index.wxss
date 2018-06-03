@@ -2,6 +2,9 @@
   width: 100%;
   height: 100%;
 }
+.hide {
+  display: none
+}
 .container .block1 {
   height: 64rpx;
   white-space: nowrap;

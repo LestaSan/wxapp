@@ -4,12 +4,12 @@
       <view wx:for="{{tabblock}}" data-id="{{index}}" 
       class="blk1tab {{curNav == index? 'selected': ''}}" bindtap="tabClick">{{item.name}}</view>
     </scroll-view>
-    <block wx:if="{{curTag == 1}}"><include src="../../test/one.wxml"/></block>
+    <block wx:if="{{curTag == 1}}"><include src="../one/one.wxml"/></block>
     <block></block>
     <block></block>
   </view>
 
-  <view class="Block2" hidden="{{tabClick()}}">
+  <view class="{{curTag != 0? 'hide':''}}">
     <view class="block2">
       <swiper class="swiper" indicator-dots="true" indicator-color="#ffffff" autoplay="true" interval="5000" duration="1000">
         <navigator class="blk2pic">
