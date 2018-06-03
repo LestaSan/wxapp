@@ -1,2 +1,22 @@
-<!--pages/one/one.wxml-->
-<text>pages/one/one.wxml</text>
+<view class="one_container">
+    <view class="one_block1">
+        <navigator class="one_block1_link" wx:for="{{one_blkpic}}">
+            <image class="one_link_pic" src="{{item.src}}"></image>
+            <view class="one_link_title">{{item.title}}</view>
+        </navigator>
+        <navigator class="one_block1_link" wx:for="{{one_blkpic8}}">
+            <image class="one_link_pic8" src="{{item.src}}"></image>
+            <view class="one_link_title">{{item.title}}</view>
+        </navigator>
+    </view>
+    <view class="one_block2">
+        <navigator class="one_block2_box" wx:for="{{one_block2pic}}">
+            <image class="one_blk2_pic" src="{{item.src}}"></image>
+            <view class="one_blk2_content">{{item.content}}</view>
+            <view class="one_blk2_price">
+                <text class="one_blk2__price">￥{{item.price}}</text>
+                <text class="one_blk2__tuan">{{item.tuan}}</text>
+            </view>
+        </navigator>
+    </view>
+</view>

@@ -4,7 +4,7 @@
       <view wx:for="{{tabblock}}" data-id="{{index}}" 
       class="blk1tab {{curNav == index? 'selected': ''}}" bindtap="tabClick">{{item.name}}</view>
     </scroll-view>
-    <block wx:if="{{curTag == 1}}"><include src="../one/one.wxml"/></block>
+    <block wx:if="{{curTag == 1}}"><include src="../one/one"/></block>
     <block></block>
     <block></block>
   </view>
