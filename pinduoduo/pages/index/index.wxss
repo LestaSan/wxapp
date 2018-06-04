@@ -42,12 +42,15 @@
   width: 100%;
   white-space: nowrap;
   margin: 0;
-  padding: 0;
+  /* padding-bottom: 26rpx; */
 }
 .scroll-view .block3_blk {
   width: 100%;
   margin-bottom: 12rpx;
   padding: 0;
+}
+.block3 .scroll-view .block3_blk:nth-child(2) {
+  margin-bottom: 24rpx;
 }
 .block3 .blk3pic {
   width: 150rpx;
@@ -63,13 +66,18 @@
   font-size: 22rpx;
 }
 .block3 .scroll-line {
+  /* position: absolute; */
   transform: scaleX(0.221);
   background-color:#e8e8e8;
   height: 4rpx;
   margin-top: 16rpx;
   margin-bottom: 10rpx;
+  /* bottom: 458rpx;
+  left: 68rpx; */
+  position: relative;
 }
 .scroll-line .scrollMove {
+  position: absolute;
   background-color: #fa4f4f;
   height: 4rpx;
   width: 480rpx;

@@ -4,6 +4,7 @@ const app = getApp()
 // const commone = require("../one/exports.js");
 Page({
   data: {
+    viewleft: 0,
     curNav: 0,
     curTag: 0,
     tabblock: [
@@ -306,11 +307,19 @@ Page({
   },
   tabClick: function(e) {
     var id = e.currentTarget.dataset.id;
-    console.log(e.currentTarget.dataset.id);
+    // console.log(e.currentTarget.dataset.id);
     this.setData({
       curNav: id,
       curTag: id
     });
+  },
+  scrollMove: function(e) {
+    console.log(e)
+    var left = e.detail.scrollLeft;
+    this.setData({
+      viewleft: left
+    })
+    // 0~224.6
   },
   onLoad: function() {
     // one.oneList1;

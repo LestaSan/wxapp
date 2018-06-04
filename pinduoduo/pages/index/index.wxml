@@ -5,8 +5,6 @@
       class="blk1tab {{curNav == index? 'selected': ''}}" bindtap="tabClick">{{item.name}}</view>
     </scroll-view>
     <block wx:if="{{curTag == 1}}"><include src="../one/one"/></block>
-    <block></block>
-    <block></block>
   </view>
 
   <view class="{{curTag != 0? 'hide':''}}">
@@ -23,7 +21,7 @@
     </view>
   
     <view class="block3">
-      <scroll-view class="scroll-view" scroll-x="true">
+      <scroll-view class="scroll-view" scroll-x="true" bindscroll="scrollMove">
         <view class="block3_blk">
           <block wx:for="{{blkpic1}}">
             <navigator class="blk3pic">
@@ -42,7 +40,7 @@
         </view>
       </scroll-view>
       <view class="scroll-line">
-        <view class="scrollMove"></view>
+        <view class="scrollMove" style="left:{{viewleft}}rpx"></view>
       </view>
     </view>
   
