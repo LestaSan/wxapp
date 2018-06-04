@@ -314,17 +314,14 @@ Page({
     });
   },
   scrollMove: function(e) {
-    console.log(e)
+    console.log(e);
+    // 0~224.6
     var left = e.detail.scrollLeft;
     this.setData({
       viewleft: left
     })
-    // 0~224.6
   },
   onLoad: function() {
-    // one.oneList1;
-    // one.oneList2;
-    // one.oneList3
-    // one.myfunc()
+    
   }
 })
