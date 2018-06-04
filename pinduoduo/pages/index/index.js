@@ -4,6 +4,7 @@ const app = getApp()
 // const commone = require("../one/exports.js");
 Page({
   data: {
+    title: null,
     viewleft: 0,
     curNav: 0,
     curTag: 0,
@@ -152,28 +153,32 @@ Page({
         src: '../../images/one.png',
         content: '\xa0\xa0\xa0睡衣女夏短袖丝绸性感夏天女人薄款大码家居服两件套冰',
         price: '29.9',
-        tuan: '已团3万件'
+        tuan: '已团3万件',
+        title: '商品详情'  
       },
       {
-        url: '',
+        url: '../goods1/goods1',
         src: '../../images/two.png',
-        content: '\xa0\xa0\xa0睡衣女夏短袖丝绸性感夏天女人薄款大码家居服两件套冰',
-        price: '29.9',
-        tuan: '已团3万件'
+        content: '\xa0\xa0\xa027包18包8包\xa0\xa0植物原木抽纸300张整箱批发（可点击）',
+        price: '10.9',
+        tuan: '已团114万件',
+        title: '商品详情'
       },
       {
         url: '',
         src: '../../images/three.png',
         content: '\xa0\xa0\xa0睡衣女夏短袖丝绸性感夏天女人薄款大码家居服两件套冰',
         price: '29.9',
-        tuan: '已团3万件'
+        tuan: '已团3万件',
+        title: '商品详情'
       },
       {
         url: '',
         src: '../../images/four.png',
         content: '\xa0\xa0\xa0睡衣女夏短袖丝绸性感夏天女人薄款大码家居服两件套冰',
         price: '29.9',
-        tuan: '已团3万件'
+        tuan: '已团3万件',
+        title: '商品详情'
       },
       {
         url: '',
@@ -187,35 +192,40 @@ Page({
         src: '../../images/six.png',
         content: '\xa0\xa0\xa0睡衣女夏短袖丝绸性感夏天女人薄款大码家居服两件套冰',
         price: '29.9',
-        tuan: '已团3万件'
+        tuan: '已团3万件',
+        title: '商品详情'
       },
       {
         url: '',
         src: '../../images/seven.png',
         content: '\xa0\xa0\xa0睡衣女夏短袖丝绸性感夏天女人薄款大码家居服两件套冰',
         price: '29.9',
-        tuan: '已团3万件'
+        tuan: '已团3万件',
+        title: '商品详情'
       },
       {
         url: '',
         src: '../../images/eight.png',
         content: '\xa0\xa0\xa0睡衣女夏短袖丝绸性感夏天女人薄款大码家居服两件套冰',
         price: '29.9',
-        tuan: '已团3万件'
+        tuan: '已团3万件',
+        title: '商品详情'
       },
       {
         url: '',
         src: '../../images/nine.png',
         content: '\xa0\xa0\xa0睡衣女夏短袖丝绸性感夏天女人薄款大码家居服两件套冰',
         price: '29.9',
-        tuan: '已团3万件'
+        tuan: '已团3万件',
+        title: '商品详情'
       },
       {
         url: '',
         src: '../../images/ten.png',
         content: '\xa0\xa0\xa0睡衣女夏短袖丝绸性感夏天女人薄款大码家居服两件套冰',
         price: '29.9',
-        tuan: '已团3万件'
+        tuan: '已团3万件',
+        title: '商品详情'
       },
     ],
     one_blkpic: [
@@ -314,13 +324,22 @@ Page({
     });
   },
   scrollMove: function(e) {
-    console.log(e);
+    // console.log(e);
     // 0~224.6
     var left = e.detail.scrollLeft;
     this.setData({
       viewleft: left
     })
   },
+  // setTitle: function(e) {
+  //   // console.log("test");
+  //   var title = e.currentTarget.dataset.title;
+  //   setTimeout(function() {
+  //     wx.setNavigationBarTitle({
+  //       title: title,
+  //     })
+  //   }, 3000);
+  // },
   onLoad: function() {
     
   }

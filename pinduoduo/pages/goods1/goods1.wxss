@@ -1,0 +1,45 @@
+/* pages/goods1/goods1.wxss */
+.container {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+.container .block1 .swiper {
+    width: 100%;
+    height: 700rpx;
+    margin: 0;
+    padding: 0;
+}
+.block1 .swiper .swiper-item {
+    width: 100%;
+    height: 100%;
+}
+.swiper .block1_pic {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+.container .block2 {
+    width: 100%;
+    margin: 0;
+    padding: 10rpx;
+}
+.block2_price .blk2_price {
+    font-size: 40rpx;
+    color: #e02e24;
+    margin: 10rpx;
+}
+.block2_price .blk2_tuan {
+    font-size: 26rpx;
+    color: #58595b;
+    padding-left: 286rpx;
+}
+.block2 .block2_content {
+    font-size: 30rpx;
+    color: #151516;
+    margin: 0 10rpx;
+    padding: 0 14rpx;
+}

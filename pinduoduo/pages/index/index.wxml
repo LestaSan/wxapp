@@ -46,7 +46,8 @@
   
   
     <view class="block4">
-      <navigator class="blk4box" wx:for="{{block4Goods}}" url="{{item.url}}">
+      <navigator class="blk4box" wx:for="{{block4Goods}}" data-title="{{item.title}}"
+      url="{{item.url}}">
         <image class="blk4pic" src="{{item.src}}"></image>
         <view class="blk4_content">{{item.content}}</view>
         <view class="blk4_price">

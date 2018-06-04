@@ -1,0 +1,21 @@
+<view class="container">
+    <view class="block1">
+        <swiper class="swiper">
+            <swiper-item class="swiper-item" wx:for="{{blk1Pic}}">
+                <image class="block1_pic" src="{{item.src}}"></image>
+            </swiper-item>
+        </swiper>
+    </view>
+    <view class="block2">
+        <view class="block2_price">
+            <text class="blk2_price">￥10.9</text>
+            <text class="blk2_tuan">已拼1149766件·2人拼单</text>
+        </view>
+        <view class="block2_content">  27包18包8包 植物原木抽纸300张整箱批发家庭装3层抽取式面巾纸</view>
+    </view>
+    <view class="block3"></view>
+    <view class="block4"></view>
+    <view class="block5"></view>
+    <view class="block6"></view>
+    <view class="block7"></view>
+</view>
