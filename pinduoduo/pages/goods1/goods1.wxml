@@ -93,11 +93,10 @@
            <view class="pur_hd">
                 <view class="tarBox">
                         <image class="goodspic" src=""></image>
-                    </view>
-                    <view class="tarBox">
+                </view>
+                <view class="tarBox">
                         <view class="price">￥{{}}</view>
                         <view class="content">{{}}</view>
-                    </view>
                 </view>
            </view>
         </view>

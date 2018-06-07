@@ -61,7 +61,7 @@ Page({
     animation.translateY(400).step()
     // 用setData改变当前动画
     that.setData({
-      text:true,
+      block3click: true,
       animationData: animation.export()
     });
     setTimeout(function(){
