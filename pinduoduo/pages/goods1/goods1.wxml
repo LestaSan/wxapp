@@ -13,9 +13,94 @@
         </view>
         <view class="block2_content">  27包18包8包 植物原木抽纸300张整箱批发家庭装3层抽取式面巾纸</view>
     </view>
-    <view class="block3"></view>
-    <view class="block4"></view>
-    <view class="block5"></view>
+    <view class="block3">
+        <view class="block3_content" bindtap="serverContent">
+            <view class="blk3_content1">
+                <text class="blk3_cnt1">名品折扣</text>
+                <text class="blk3_cnt2">大牌名品低价购</text>
+            </view>
+            <view class="blk3_content2">
+                <view class="blk3_box" wx:for="{{lists}}">
+                    <image src="{{item.src}}"></image>
+                    <text class="blk3_cnt3">{{item.title}}</text>
+                </view>
+                <image class="blk3_more" src="../../images/more.png"></image>
+            </view>
+        </view>
+        <view class="block_back" wx:if="{{block3click}}" bindtap="hideModal"></view>
+        <view class="block3_out" wx:if="{{block3click}}" animation="{{animationData}}">
+            <view class="blk_out_title">服务说明</view>
+            <view class="blk_out_list">
+                <view class="list_item" wx:for="{{lists}}">
+                    <view>
+                        <image src="{{item.src}}"></image>
+                    </view>
+                    <view class="list">
+                        <text class="list_title">{{item.title}}</text>
+                        <text class="list_cnt">{{item.content}}</text>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="block4">
+        <view class="block4_title">商品详情</view>
+        <view class="block4_content">
+            <view class="blk4_title">商品描述</view>
+            <view class="blk4_content">【同等的价格我们比的是质量，同等的质量我们比的是价格】 绿色原材料，精选原生木浆，
+                高温杀菌，品质优良，纸质细腻柔韧450°高温处理，囤货更放心，
+                三层压花设计，不易分层，擦拭无尘无屑，湿水不易破，亲肤不掉屑，
+                中福抽纸，质优更优惠
+            </view>
+        </view>
+    </view>
+    <view class="block5">
+        <view class="block5_pic" wx:for="{{blk5pic}}">
+            <image src="{{item.src}}" mode="widthFix"></image>
+        </view>
+    </view>
     <view class="block6"></view>
     <view class="block7"></view>
+
+
+    <view class="tabBar">
+        <view class="tabBar_Box tabBar_box1">
+            <view class="tabBar_box tabbox">
+                <image class="tab_image" src="../../images/Gshouye.png"></image>
+                <view class="tab_name">首页</view>
+            </view>
+            <view class="tabBar_box tabbox" >
+                <image class="tab_image" src="../../images/Gshoucang.png"></image>
+                <view class="tab_name">收藏</view>
+            </view>
+            <view class="tabBar_box tabbox">
+                <image class="tab_image" src="../../images/Gkefu.png"></image>
+                <view class="tab_name">客服</view>
+            </view>
+        </view>
+        <view class="tabBar_Box tabBar_box2">
+            <view class="tabBar_box tabbox2 box1">
+                <view class="tab_content">￥14.9</view>
+                <view class="tab_content">单独购买</view>
+            </view>
+            <view class="tabBar_box tabbox2 box2" bindtap="purchase">
+                <view class="tab_content">￥10.9</view>
+                <view class="tab_content">一键开团</view>
+            </view>
+        </view>
+        <view class="block_back" wx:if="{{block5click}}" bindtap="hideModal2"></view>
+        <view class="purchase" wx:if="{{block5click}}">
+           <view class="pur_hd">
+                <view class="tarBox">
+                        <image class="goodspic" src=""></image>
+                    </view>
+                    <view class="tarBox">
+                        <view class="price">￥{{}}</view>
+                        <view class="content">{{}}</view>
+                    </view>
+                </view>
+           </view>
+        </view>
+    </view>
 </view>
+
