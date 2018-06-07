@@ -1,4 +1,4 @@
-<view class="container">
+<view class="container {{blockclick? 'hidden': ''}}">
     <view class="block1">
         <swiper class="swiper">
             <swiper-item class="swiper-item" wx:for="{{blk1Pic}}">
@@ -27,7 +27,7 @@
                 <image class="blk3_more" src="../../images/more.png"></image>
             </view>
         </view>
-        <view class="block_back" wx:if="{{block3click}}" bindtap="hideModal"></view>
+        <view class="block_back" wx:if="{{blockclick}}" bindtap="hideModal" catchtouchstart=""></view>
         <view class="block3_out" wx:if="{{block3click}}" animation="{{animationData}}">
             <view class="blk_out_title">服务说明</view>
             <view class="blk_out_list">
@@ -88,7 +88,7 @@
                 <view class="tab_content">一键开团</view>
             </view>
         </view>
-        <view class="block_back" wx:if="{{block5click}}" bindtap="hideModal2"></view>
+        <view class="block_back" wx:if="{{blockclick}}" bindtap="hideModal2"></view>
         <view class="purchase" wx:if="{{block5click}}">
            <view class="pur_hd">
                 <view class="tarBox">

@@ -1,6 +1,7 @@
 // pages/goods1/goods1.js
 Page({
   data: {
+    blockclick: false,
     block3click: false,
     block5click: false,
     animationData: {},
@@ -49,7 +50,6 @@ Page({
   serverContent: function(e) {
     var that = this;
     console.log(e);
-    
     var animation  = wx.createAnimation({
       // 动画持续时间
         duration:200,
@@ -61,6 +61,7 @@ Page({
     animation.translateY(400).step()
     // 用setData改变当前动画
     that.setData({
+      blockclick: true,
       block3click: true,
       animationData: animation.export()
     });
@@ -73,18 +74,8 @@ Page({
   },
   hideModal: function() {
     this.setData({
+      blockclick: false,
       block3click: false
-    })
-  },
-  purchase: function(e) {
-    console.log(e);
-    this.setData({
-      block5click:true
-    })
-  },
-  hideModal2: function() {
-    this.setData({
-      block5click: block3click.value
     })
   },
   onLoad: function (options) {
