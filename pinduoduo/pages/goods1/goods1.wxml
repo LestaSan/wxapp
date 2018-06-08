@@ -27,7 +27,7 @@
                 <image class="blk3_more" src="../../images/more.png"></image>
             </view>
         </view>
-        <view class="block_back" wx:if="{{blockclick}}" bindtap="hideModal" catchtouchstart=""></view>
+        <view class="block_back" wx:if="{{block3click}}" bindtap="hideModal"></view>
         <view class="block3_out" wx:if="{{block3click}}" animation="{{animationData}}">
             <view class="blk_out_title">服务说明</view>
             <view class="blk_out_list">
@@ -87,19 +87,39 @@
                 <view class="tab_content">￥10.9</view>
                 <view class="tab_content">一键开团</view>
             </view>
-        </view>
-        <view class="block_back" wx:if="{{blockclick}}" bindtap="hideModal2"></view>
-        <view class="purchase" wx:if="{{block5click}}">
-           <view class="pur_hd">
-                <view class="tarBox">
-                        <image class="goodspic" src=""></image>
+            <view class="block_back" wx:if="{{block5click}}" bindtap="hideModal2"></view>
+            <view class="purchase" wx:if="{{block5click}}" animation="{{animationData}}">
+                <view class="pur_hd" wx:for="{{purContent}}">
+                    <view class="tabBox pur_pic">
+                        <image class="goodspic" src="{{item.src}}"></image>
+                    </view>
+                    <view class="tabBox">
+                        <view class="price">￥{{item.price}}</view>
+                        <view class="content">{{item.title}}</view>
+                    </view>
                 </view>
-                <view class="tarBox">
-                        <view class="price">￥{{}}</view>
-                        <view class="content">{{}}</view>
+                <view class="pur_bd">
+                    <view class="text">货号</view>
+                    <view class="modalLists {{curNav == index? 'selected' : ''}}" bindtap="selected" 
+                    wx:for="{{modalLists}}" data-index="{{index}}" >{{item.content}}</view>
                 </view>
-           </view>
+                <view class="pur_num">
+                    <view class="text">数量</view>
+                    <view class="stepper">
+                        <!-- 减号 -->
+                        <view class="normal" data-index="{{index}}" bindtap="bindMinus">-</view>
+                        <!-- 数值 -->
+                        <view class="number">{{number}}</view>
+                        <!-- 加号 -->
+                        <view class="normal" data-index="{{index}}" bindtap="bindPlus">+</view>
+                    </view>
+                </view>
+                <view class="confirm" bindtap="purchaseClick">确定</view>
+                <view class="confirmOut" wx:if="{{showOut}}" 
+                animation="{{animationData}}">请选择货号</view>
+            </view>
         </view>
+        
     </view>
 </view>
 

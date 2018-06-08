@@ -106,11 +106,6 @@
     left: 0;
     z-index: 999;
     background: #fff;
-    animation: move 3s linear 5s;
-    /* transition-duration: 3s;
-    transition-timing-function: linear;
-    transform: translateY(900);
-    transition-delay: 3s; */
 }
 .block3_out .blk_out_title {
     text-align: center;
@@ -226,17 +221,13 @@
 
 .tabBar .purchase {
     width: 100%;
-    height: 60%;
+    height: 70%;
     overflow: hidden;
     position: fixed;
     bottom: 0;
     left: 0;
     z-index: 999;
     background: #fff;
-    transition-duration: 3s;
-    transition-timing-function: linear;
-    transform: translateY(400);
-    transition-delay: 2s
 }
 .tabBar .block_back {
     width: 100%;
@@ -251,11 +242,119 @@
     color: #fff;
 }
 
-@keyframes move {
-    0% {
-        transform: translateY(400);
-    }
-    100% {
-        transform: translateY(100);
-    }
+.purchase .pur_hd {
+    width: 100%;
+    overflow: visible;
+    padding: 20rpx;
+    border-bottom: 1rpx solid #dddddd;
+}
+.pur_hd .tabBox {
+    display: inline-block;
+    width: 190rpx;
+    height: 190rpx;
+    margin: 0 20rpx;
+    vertical-align: middle
+}
+.pur_hd .pur_pic {
+    border: 1rpx solid #9c9c9c;
+    border-radius: 20rpx;
+    z-index: 1000;
+    text-align: center
+}
+.pur_hd .tabBox image {
+    width: 170rpx;
+    height: 170rpx;
+}
+.pur_hd .tabBox .price {
+    margin-top: 70rpx;
+    color: #e02e24;
+    font-size: 40rpx;
+    white-space: nowrap;
+}
+.pur_hd .tabBox .content {
+    font-size: 30rpx;
+    color: #9c9c9c;
+    padding: 6rpx 14rpx;
+    white-space: nowrap;
+}
+.purchase .pur_bd {
+    padding: 10rpx;
+    border-bottom: 1rpx solid #ededed;
+}
+.purchase .text {
+    font-size: 30rpx;
+    margin-left: 20rpx;
+}
+.pur_bd .modalLists {
+    display: inline-block;
+    font-size: 28rpx;
+    margin: 18rpx;
+    padding: 14rpx;
+    border-radius: 14rpx;
+    background: #f5f5f5;
+}
+.pur_bd .selected {
+    display: inline-block;
+    color: #ffffff;
+    font-size: 28rpx;
+    margin: 18rpx;
+    padding: 14rpx;
+    border-radius: 14rpx;
+    background: #e02e24;
+}
+.purchase .pur_num {
+    padding: 30rpx 0;
+    border-bottom: 1rpx solid #ededed;
+    width: 100%;
+}
+.pur_num > view {
+    display: inline-block;
+}
+.pur_num .stepper {
+    float: right;
+    margin-right: 30rpx;
+}
+.stepper view {
+    display: inline-block;
+    margin: 0 10rpx;
+    background: #f2f2f2;
+    text-align: center;
+    vertical-align: middle
+}
+.pur_num .stepper .normal {
+    width: 56rpx;
+    height: 48rpx;
+    font-size: 36rpx;
+    color: #b4b4b4;
+}
+.pur_num .stepper .number {
+    font-size: 20rpx;
+    color: #151616;
+    width: 80rpx;
+    height: 48rpx;
+    line-height: 48rpx
+}
+.purchase .confirm {
+    width: 100%;
+    padding: 20rpx 0;
+    text-align: center;
+    left: 0;
+    bottom: 0;
+    position: fixed;
+    background: #e02e24;
+    color: #ffffff;
+    border-radius: 14rpx
+}
+.purchase .confirmOut {
+    width: 400rpx;
+    position: fixed;
+    top: 34%;
+    left: 21%;
+    padding: 20rpx;
+    background: #000;
+    opacity: 0.7;
+    z-index: 999;
+    color: #fff;
+    border-radius: 14rpx;
+    text-align: center;
 }

@@ -4,6 +4,9 @@ Page({
     blockclick: false,
     block3click: false,
     block5click: false,
+    curNav: null,
+    number: '1',
+    showOut: false,
     animationData: {},
     blk1Pic: [
       {src:'//t00img.yangkeduo.com/t04img/images/2018-06-04/b1329c9c6c2f5b36daa6b7af23c933ee.jpeg'},
@@ -45,9 +48,67 @@ Page({
       {src: "//omsproductionimg.yangkeduo.com/images/unknown/0/UlbLIagyTptHDtquYSU90hyUBGvFHH3a.jpg@750w_1l_50Q"},
       {src: "//omsproductionimg.yangkeduo.com/images/unknown/0/tsxXF0rN1J93DOTnBBD0FKHZccm9NxX8.jpg@750w_1l_50Q"},
       {src: "//omsproductionimg.yangkeduo.com/images/unknown/0/MnmpO1NXja8RtRf6ICsbSieB48RpIUTS.jpg@750w_1l_50Q"}
-    ]
+    ],
+    purContent: [
+      {
+        src: "//t00img.yangkeduo.com/t05img/images/2018-06-04/e5162f6d8e3ee7bc5620ae4f7c9c4a42.jpeg",
+        price: "9.9-27.9",
+        title: "请选择\xa0\xa0货号"
+      }
+    ],
+    modalLists: [
+      { 
+        src: "//t03img.yangkeduo.com/images/2018-04-17/9b022a30f3a9f10b437a1e19defb20fb.jpeg",
+        content:"蓝色经典18包" ,
+        price: "20.26",
+        title: "已选：蓝色经典18包"
+      },
+      { 
+        src: "//t09img.yangkeduo.com/images/2018-04-17/1225b00e178d9042841170ca70e926b8.jpeg",
+        content:"蓝色经典27包" ,
+        price: "27.9",
+        title: "已选：蓝色经典27包"
+      },
+      { 
+        src: "//t07img.yangkeduo.com/images/2018-04-17/bcbca6f465fa5e2c1a5628ec10d69089.jpeg",
+        content:"蓝色经典8包" ,
+        price: "10.9",
+        title: "已选：蓝色经典8包"
+      },
+    ],
   },
   serverContent: function(e) {
+    var that = this;
+    // console.log(e);
+    var animation  = wx.createAnimation({
+      // 动画持续时间
+        duration:200,
+        // 定义动画效果，当前是匀速
+        timingFunction:'linear'
+    });
+    that.animation = animation
+    // 先在y轴偏移，然后用step()完成一个动画
+    animation.translateY(400).step()
+    // 用setData改变当前动画
+    that.setData({
+      block3click: true,
+      blockclick: true,
+      animationData: animation.export()
+    });
+    setTimeout(function(){
+      animation.translateY(0).step()
+      that.setData({
+        animationData: animation.export()
+      })
+    },100)
+  },
+  hideModal: function() {
+    this.setData({
+      block3click: false,
+      blockclick: false
+    })
+  },
+  purchase: function(e) {
     var that = this;
     console.log(e);
     var animation  = wx.createAnimation({
@@ -61,8 +122,8 @@ Page({
     animation.translateY(400).step()
     // 用setData改变当前动画
     that.setData({
+      block5click: true,
       blockclick: true,
-      block3click: true,
       animationData: animation.export()
     });
     setTimeout(function(){
@@ -72,11 +133,60 @@ Page({
       })
     },100)
   },
-  hideModal: function() {
+  hideModal2: function() {
     this.setData({
-      blockclick: false,
-      block3click: false
+      block5click: false,
+      blockclick: false
     })
+  },
+  selected: function(e) {
+    var index = e.currentTarget.dataset.index
+    var list = new Array;
+    list[0] = this.data.modalLists[index];
+    console.log(list);
+    this.setData({
+      curNav: index,
+      purContent: list
+    });
+  },
+  bindMinus: function() {
+    var num = parseInt(this.data.number);
+    // 字符串转数字类
+    // console.log(typeof num);  
+    var that = this;
+    if (num > 1) {
+      num = num - 1;
+      that.setData({  
+        number: num
+      })
+    } 
+  },
+  bindPlus: function() {
+    var num = parseInt(this.data.number);
+    num = num + 1;
+    this.setData({
+        number: num
+    })
+  },
+  purchaseClick: function() {
+    var a = this.data.curNav;
+    var that = this;
+    if (a == null) {
+      that.setData({
+        showOut: true
+      }) 
+    } else {
+      wx.navigateTo({
+        url: '../pay/pay',
+      })
+    };
+    var animation  = wx.createAnimation();
+    setTimeout(function(){
+      that.setData({
+        animationData: animation.export(),
+        showOut: false
+      })
+    },1500)
   },
   onLoad: function (options) {
   
