@@ -65,10 +65,11 @@
 
     <view class="tabBar">
         <view class="tabBar_Box tabBar_box1">
-            <view class="tabBar_box tabbox">
+            <navigator class="tabBar_box tabbox" 
+            url="../index/index" open-type="switchTab">
                 <image class="tab_image" src="../../images/Gshouye.png"></image>
                 <view class="tab_name">首页</view>
-            </view>
+            </navigator>
             <view class="tabBar_box tabbox" >
                 <image class="tab_image" src="../../images/Gshoucang.png"></image>
                 <view class="tab_name">收藏</view>

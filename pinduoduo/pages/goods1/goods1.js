@@ -110,7 +110,7 @@ Page({
   },
   purchase: function(e) {
     var that = this;
-    console.log(e);
+    // console.log(e);
     var animation  = wx.createAnimation({
       // 动画持续时间
         duration:200,
@@ -140,14 +140,18 @@ Page({
     })
   },
   selected: function(e) {
-    var index = e.currentTarget.dataset.index
+    var index = e.currentTarget.dataset.index;
     var list = new Array;
     list[0] = this.data.modalLists[index];
-    console.log(list);
+    // console.log(list);
     this.setData({
       curNav: index,
-      purContent: list
+      purContent: list,
     });
+    wx.setStorage({
+      key: 'list',
+      data: list[0]
+    })
   },
   bindMinus: function() {
     var num = parseInt(this.data.number);
@@ -159,13 +163,21 @@ Page({
       that.setData({  
         number: num
       })
-    } 
+    }
+    wx.setStorage({
+      key: 'number',
+      data: num
+    })
   },
   bindPlus: function() {
     var num = parseInt(this.data.number);
     num = num + 1;
     this.setData({
         number: num
+    })
+    wx.setStorage({
+      key: 'number',
+      data: num
     })
   },
   purchaseClick: function() {
@@ -189,7 +201,11 @@ Page({
     },1500)
   },
   onLoad: function (options) {
-  
+    // 采坑处
+    wx.clearStorage({
+      key: 'String',
+      key: 'list'
+    })
   },
 
  

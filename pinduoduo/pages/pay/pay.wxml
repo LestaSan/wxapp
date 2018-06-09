@@ -1,2 +1,36 @@
-<!--pages/pay/pay.wxml-->
-<text>pages/pay/pay.wxml</text>
+<view class="container">
+    <navigator class="block1">
+        <view class="block1_box">
+            <image src="../../images/dingwei.png"></image>
+        </view>
+        <view class="box block1_box">
+            <view class="box blk1_box">
+                <text class="name">Lesta</text>
+                <text class="telephone">1234567890</text>
+            </view>
+            <view class="box blk1_box2">XX省 XX市 XX区 XXXXXXXXXXXXXXX</view>
+        </view>
+    </navigator>
+    <view class="block2">XXX旗舰店</view>
+    <view class="block3">
+        <view class="block3_box">
+            <image src="{{src}}"></image>
+        </view>
+        <view class="box block3_box">
+            <view class="box content">27包18包8包 植护原木抽纸300张整箱批发家庭装3层抽去式面巾纸</view>
+            <view class="box modal">货号：{{modal}}</view>
+            <view class="box price">￥{{price}}/件</view>
+        </view>
+    </view>
+    <view class="block4">
+        <view class="text">购买数量</view>
+        <view class="stepper">
+            <!-- 减号 -->
+            <view class="box normal" data-index="{{index}}" bindtap="bindMinus">-</view>
+            <!-- 数值 -->
+            <view class="box number">{{number}}</view>
+            <!-- 加号 -->
+            <view class="box normal" data-index="{{index}}" bindtap="bindPlus">+</view>
+        </view>
+    </view>
+</view>
