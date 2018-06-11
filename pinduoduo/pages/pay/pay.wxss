@@ -106,3 +106,34 @@
     font-size: 36rpx;
     text-align: center;
 }
+
+
+.container .block5 {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 80rpx;
+    width: 100%;
+    display: flex;
+}
+.block5_box {
+    padding-top: 14rpx;
+}
+.block5_box.box1 {
+    width: 500rpx;
+    text-align: center;
+}
+.block5_box.box1 .content2 {
+    font-size: 40rpx;
+    color: #e02e24;
+}
+.block5_box.box1 .content3 {
+    color: #e02e24;
+}
+.block5_box.box2 {
+    width: 250rpx;
+    font-size: 42rpx;
+    background: #e02e24;
+    color: #ffffff;
+    text-align: center;
+}

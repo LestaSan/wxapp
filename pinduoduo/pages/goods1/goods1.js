@@ -200,10 +200,23 @@ Page({
       })
     },1500)
   },
+  onShow: function (options) {
+    var that = this;
+    wx.getStorage({
+      key: 'number',
+      success: function(res){
+        console.log(res);
+        var number = res.data;
+        that.setData({
+          number: number
+        })
+      },
+    })
+  },
   onLoad: function (options) {
     // 采坑处
     wx.clearStorage({
-      key: 'String',
+      key: 'number',
       key: 'list'
     })
   },

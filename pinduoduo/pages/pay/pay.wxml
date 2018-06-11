@@ -33,4 +33,14 @@
             <view class="box normal" data-index="{{index}}" bindtap="bindPlus">+</view>
         </view>
     </view>
+    <view class="block5">
+        <view class="block5_box box1">
+            <text class="content1">实付款：</text>
+            <text class="content2">￥{{total}}</text>
+            <text class="content3">免运费</text>
+        </view>
+        <view class="block5_box box2" >
+            <text>立即支付</text>
+        </view>
+    </view>
 </view>
