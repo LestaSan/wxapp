@@ -1,19 +1,20 @@
 {
   "pages": [
-    
     "pages/index/index",
+    "pages/pay/pay",
+    "pages/goods1/goods1",
     "pages/new/new",
     "pages/search/search",
     "pages/communicate/communicate",
     "pages/myself/myself",
     "pages/logs/logs",
-    "pages/one/one"
-    
+    "pages/one/one",
+    "pages/invitation/invitation"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#e02e24",
-    "navigationBarTitleText": "拼多多",
+    "navigationBarTitleText": "Lesta",
     "navigationBarTextStyle": "white"
   },
   "tabBar": {
