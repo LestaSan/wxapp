@@ -6,7 +6,7 @@
     padding: 0;
     background: #f4f4f4;
 }
-.hidden {
+.notscroll {
     overflow: hidden;
 }
 .container .block1 {

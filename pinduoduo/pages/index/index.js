@@ -317,7 +317,7 @@ Page({
     });
   },
   scrollMove: function(e) {
-    // console.log(e);
+    console.log(e);
     // 0~224.6
     var left = e.detail.scrollLeft;
     this.setData({
