@@ -1,0 +1,8 @@
+<view class="container">
+    <view class="content">年轻人不要冲动！！！</view>
+    <view class="picture">
+        <image src="../../images/doge.jpg"></image>
+        <image src="../../images/doge.jpg"></image>
+        <image src="../../images/doge.jpg"></image>
+    </view>
+</view>

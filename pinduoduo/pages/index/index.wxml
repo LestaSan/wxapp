@@ -57,7 +57,16 @@
       </navigator>
     </view>
   </view>
+  <view class="invite_container" wx:if="{{show}}">
+    <navigator class="invitation" animation="{{animationData}}"
+    url="../invitation/invitation">
+        <view class="invite invite_pic">
+            <image src="../../images/touxiang.png"></image>
+        </view>
+        <view class="invite invite_content">Lesta邀请您一起剁手</view>
+    </navigator>
   </view>
+</view>
  
 
     

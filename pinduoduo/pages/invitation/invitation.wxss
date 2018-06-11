@@ -1,0 +1,11 @@
+.container .content {
+    font-size: 45rpx;
+    color: red;
+    text-align: center;
+    padding: 20rpx;
+}
+.picture image {
+    width: 200rpx;
+    height: 200rpx;
+    padding: 25rpx;
+}

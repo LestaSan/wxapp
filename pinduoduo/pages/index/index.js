@@ -1,13 +1,14 @@
 //index.js
 //获取应用实例
 const app = getApp()
-// const commone = require("../one/exports.js");
 Page({
   data: {
     title: null,
     viewleft: 0,
     curNav: 0,
     curTag: 0,
+    show: true,
+    animationData: {},
     tabblock: [
       {
         name: "热门",
@@ -149,14 +150,6 @@ Page({
     ],
     block4Goods: [
       {
-        url: '',
-        src: '../../images/one.png',
-        content: '\xa0\xa0\xa0睡衣女夏短袖丝绸性感夏天女人薄款大码家居服两件套冰',
-        price: '29.9',
-        tuan: '已团3万件',
-        title: '商品详情'  
-      },
-      {
         url: '../goods1/goods1',
         src: '../../images/two.png',
         content: '\xa0\xa0\xa027包18包8包\xa0\xa0植物原木抽纸300张整箱批发（可点击）',
@@ -165,38 +158,38 @@ Page({
         title: '商品详情'
       },
       {
-        url: '',
+        url: '../goods1/goods1',
         src: '../../images/three.png',
-        content: '\xa0\xa0\xa0睡衣女夏短袖丝绸性感夏天女人薄款大码家居服两件套冰',
+        content: '\xa0\xa0\xa027包18包8包\xa0\xa0植物原木抽纸300张整箱批发（可点击）',
         price: '29.9',
         tuan: '已团3万件',
         title: '商品详情'
       },
       {
-        url: '',
+        url: '../goods1/goods1',
         src: '../../images/four.png',
-        content: '\xa0\xa0\xa0睡衣女夏短袖丝绸性感夏天女人薄款大码家居服两件套冰',
+        content: '\xa0\xa0\xa027包18包8包\xa0\xa0植物原木抽纸300张整箱批发（可点击）',
         price: '29.9',
         tuan: '已团3万件',
         title: '商品详情'
       },
       {
-        url: '',
+        url: '../goods1/goods1',
         src: '../../images/five.png',
-        content: '\xa0\xa0\xa0睡衣女夏短袖丝绸性感夏天女人薄款大码家居服两件套冰',
+        content: '\xa0\xa0\xa027包18包8包\xa0\xa0植物原木抽纸300张整箱批发（可点击）',
         price: '29.9',
         tuan: '已团3万件'
       },
       {
-        url: '',
+        url: '../goods1/goods1',
         src: '../../images/six.png',
-        content: '\xa0\xa0\xa0睡衣女夏短袖丝绸性感夏天女人薄款大码家居服两件套冰',
+        content: '\xa0\xa0\xa027包18包8包\xa0\xa0植物原木抽纸300张整箱批发（可点击）',
         price: '29.9',
         tuan: '已团3万件',
         title: '商品详情'
       },
       {
-        url: '',
+        url: '../goods1/goods1',
         src: '../../images/seven.png',
         content: '\xa0\xa0\xa0睡衣女夏短袖丝绸性感夏天女人薄款大码家居服两件套冰',
         price: '29.9',
@@ -204,25 +197,25 @@ Page({
         title: '商品详情'
       },
       {
-        url: '',
+        url: '../goods1/goods1',
         src: '../../images/eight.png',
-        content: '\xa0\xa0\xa0睡衣女夏短袖丝绸性感夏天女人薄款大码家居服两件套冰',
+        content: '\xa0\xa0\xa027包18包8包\xa0\xa0植物原木抽纸300张整箱批发（可点击）',
         price: '29.9',
         tuan: '已团3万件',
         title: '商品详情'
       },
       {
-        url: '',
+        url: '../goods1/goods1',
         src: '../../images/nine.png',
-        content: '\xa0\xa0\xa0睡衣女夏短袖丝绸性感夏天女人薄款大码家居服两件套冰',
+        content: '\xa0\xa0\xa027包18包8包\xa0\xa0植物原木抽纸300张整箱批发（可点击）',
         price: '29.9',
         tuan: '已团3万件',
         title: '商品详情'
       },
       {
-        url: '',
+        url: '../goods1/goods1',
         src: '../../images/ten.png',
-        content: '\xa0\xa0\xa0睡衣女夏短袖丝绸性感夏天女人薄款大码家居服两件套冰',
+        content: '\xa0\xa0\xa027包18包8包\xa0\xa0植物原木抽纸300张整箱批发（可点击）',
         price: '29.9',
         tuan: '已团3万件',
         title: '商品详情'
@@ -331,16 +324,15 @@ Page({
       viewleft: left
     })
   },
-  // setTitle: function(e) {
-  //   // console.log("test");
-  //   var title = e.currentTarget.dataset.title;
-  //   setTimeout(function() {
-  //     wx.setNavigationBarTitle({
-  //       title: title,
-  //     })
-  //   }, 3000);
-  // },
   onLoad: function() {
-    
+    var that = this;
+    var animation = wx.createAnimation();
+    setInterval(function () {
+      var show = !that.data.show;
+      that.setData({
+        animationData: animation.export(),
+        show: show
+      })
+    }, 1500)
   }
 })
